@@ -2,8 +2,8 @@
   "name": "basic-vector-2d",
   "version": "1.0.0",
   "description": "A basic 2D Vector.",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/Vector.js",
+  "types": "lib/Vector.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
