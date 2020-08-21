@@ -33,21 +33,21 @@ export default class Vector {
   }
 
   haveSameDirectionWith(vector: Vector) {
-    const dotProduct = this.normalize().dotProduct(vector.normalize())
-    return this.areEqual(dotProduct, 1)
+    const dotProduct = this.normalize().dotProduct(vector.normalize());
+    return this.areEqual(dotProduct, 1);
   }
 
   haveOppositeDirectionTo(vector: Vector) {
-    const dotProduct = this.normalize().dotProduct(vector.normalize())
-    return this.areEqual(dotProduct, -1)
+    const dotProduct = this.normalize().dotProduct(vector.normalize());
+    return this.areEqual(dotProduct, -1);
   }
 
   isPerpendicularTo(vector: Vector) {
-    const dotProduct = this.normalize().dotProduct(vector.normalize())
-    return this.areEqual(dotProduct, 0)
+    const dotProduct = this.normalize().dotProduct(vector.normalize());
+    return this.areEqual(dotProduct, 0);
   }
 
   private areEqual(one: number, other: number, epsilon = Vector.EPSILON) {
-      return Math.abs(one - other) < epsilon
+    return Math.abs(one - other) < epsilon;
   }
 }

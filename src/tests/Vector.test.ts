@@ -39,19 +39,19 @@ test('Normalize', () => {
 });
 
 test('Vectors have the same direction', () => {
-  const vec1 = new Vector(2, 4)
-  const vec2 = new Vector(4, 8)
+  const vec1 = new Vector(2, 4);
+  const vec2 = new Vector(4, 8);
   expect(vec1.haveSameDirectionWith(vec2)).toBe(true);
 });
 
 test('Vectors have the opposite direction', () => {
-  const vec1 = new Vector(2, 4)
-  const vec2 = new Vector(-4, -8)
+  const vec1 = new Vector(2, 4);
+  const vec2 = new Vector(-4, -8);
   expect(vec1.haveOppositeDirectionTo(vec2)).toBe(true);
 });
 
 test('Vectors are perpendicular', () => {
-  const vec1 = new Vector(-2, 2)
-  const vec2 = new Vector(2, 2)
+  const vec1 = new Vector(-2, 2);
+  const vec2 = new Vector(2, 2);
   expect(vec1.isPerpendicularTo(vec2)).toBe(true);
 });

@@ -1,6 +1,6 @@
 {
   "name": "basic-vector-2d",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic 2D Vector.",
   "main": "lib/Vector.js",
   "types": "lib/Vector.d.ts",
@@ -19,7 +19,11 @@
     "type": "git",
     "url": "git+https://github.com/PavleNeskovic/basic-vector-2d.git"
   },
-  "keywords": ["Vector", "Vector2D", "Math"],
+  "keywords": [
+    "Vector",
+    "Vector2D",
+    "Math"
+  ],
   "author": "PavleNeskovic",
   "license": "ISC",
   "bugs": {
