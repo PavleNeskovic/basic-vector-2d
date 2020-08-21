@@ -8,46 +8,46 @@ export default class Vector {
     this.y = y;
   }
 
-  add(vector: Vector) {
+  add(vector: Vector) : Vector {
     return new Vector(this.x + vector.x, this.y + vector.y);
   }
 
-  subtract(vector: Vector) {
+  subtract(vector: Vector) : Vector {
     return new Vector(this.x - vector.x, this.y - vector.y);
   }
 
-  scaleBy(num: number) {
+  scaleBy(num: number) : Vector{
     return new Vector(this.x * num, this.y * num);
   }
 
-  length() {
+  length() : number{
     return Math.hypot(this.x, this.y);
   }
 
-  dotProduct(vector: Vector) {
+  dotProduct(vector: Vector) : number{
     return this.x * vector.x + this.y * vector.y;
   }
 
-  normalize() {
+  normalize() : Vector{
     return this.scaleBy(1 / this.length());
   }
 
-  haveSameDirectionWith(vector: Vector) {
+  haveSameDirectionWith(vector: Vector) : boolean {
     const dotProduct = this.normalize().dotProduct(vector.normalize());
     return this.areEqual(dotProduct, 1);
   }
 
-  haveOppositeDirectionTo(vector: Vector) {
+  haveOppositeDirectionTo(vector: Vector) : boolean {
     const dotProduct = this.normalize().dotProduct(vector.normalize());
     return this.areEqual(dotProduct, -1);
   }
 
-  isPerpendicularTo(vector: Vector) {
+  isPerpendicularTo(vector: Vector) : boolean {
     const dotProduct = this.normalize().dotProduct(vector.normalize());
     return this.areEqual(dotProduct, 0);
   }
 
-  private areEqual(one: number, other: number, epsilon = Vector.EPSILON) {
+  private areEqual(one: number, other: number, epsilon = Vector.EPSILON) : boolean {
     return Math.abs(one - other) < epsilon;
   }
 }
